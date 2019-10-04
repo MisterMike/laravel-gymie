@@ -6,8 +6,8 @@
         <!-- BEGIN PAGE HEADING -->
         <div class="page-head bg-grey-100 padding-top-15 no-padding-bottom">
             @include('flash::message')
-            <h1 class="page-title">Settings</h1>
-            <a href="{{ action('SettingsController@edit') }}" class="btn btn-primary active pull-right" role="button"><i class="ion-compose"></i> Edit</a></h1>
+            <h1 class="page-title">@lang('settings.settings-title')</h1>
+            <a href="{{ action('SettingsController@edit') }}" class="btn btn-primary active pull-right" role="button"><i class="ion-compose"></i> @lang('settings.settings-edit')</a></h1>
         </div>
 
         <div class="container-fluid">
@@ -15,7 +15,7 @@
                 <div class="col-md-12">
                     <div class="panel no-border">
                         <div class="panel-title bg-white">
-                            <div class="panel-head font-size-18"><i class="fa fa-cogs"></i> General</div>
+                            <div class="panel-head font-size-18"><i class="fa fa-cogs"></i> @lang('settings.settings-general')</div>
                         </div>
 
                         <div class="panel-body"> <!-- Panel Body -->
@@ -24,21 +24,21 @@
 
                                 <div class="col-sm-4">
                                     <div class="form-group">
-                                        <label>Gym Name</label>
+                                        <label>@lang('settings.settings-gyme-name')</label>
                                         <p>{{ $settings['gym_name'] }}</p>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-4">
                                     <div class="form-group">
-                                        <label>Financial year start</label>
+                                        <label>@lang('settings.settings-year-start')</label>
                                         <p>{{ $settings['financial_start'] }}</p>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-4">
                                     <div class="form-group">
-                                        <label>Financial year end</label>
+                                        <label>@lang('settings.settings-year-end')</label>
                                         <p>{{ $settings['financial_end'] }}</p>
                                     </div>
                                 </div>
@@ -57,7 +57,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <label>Gym Address Line 1</label>
+                                                <label>@lang('settings.settings-gym-address1')</label>
                                                 <p>{{ $settings['gym_address_1'] }}</p>
                                             </div>
                                         </div>
@@ -66,7 +66,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <label>Gym Address Line 2</label>
+                                                <label>@lang('settings.settings-gyme-address2')</label>
                                                 <p>{{ $settings['gym_address_2'] }}</p>
                                             </div>
                                         </div>

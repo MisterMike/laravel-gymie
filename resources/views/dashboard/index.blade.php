@@ -47,21 +47,23 @@
                 <div class="col-lg-6">
                     <div class="panel">
                         <div class="panel-title">
-                            <div class="panel-head"><i class="fa fa-users"></i><a href="{{ action('MembersController@index') }}">Members</a></div>
-                            <div class="pull-right"><a href="{{ action('MembersController@create') }}" class="btn-sm btn-primary active" role="button"><i
-                                            class="fa fa-user-plus"></i> Add</a></div>
+                            <div class="panel-head"><i class="fa fa-users"></i><a href="{{ action('MembersController@index') }}">@lang('dashboard.member-title')</a></div>
+                            <div class="pull-right"><a href="{{ action('MembersController@create') }}" class="btn-sm btn-primary active" role="button"><i class="fa fa-user-plus"></i> @lang('dashboard.member-add')</a></div>
                         </div>
 
                         <div class="panel-body with-nav-tabs">
                             <!-- Tabs Heads -->
                             <ul class="nav nav-tabs">
-                                <li class="active"><a href="#expiring" data-toggle="tab">Expiring<span
-                                                class="label label-warning margin-left-5">{{ $expiringCount }}</span></a></li>
-                                <li><a href="#expired" data-toggle="tab">Expired<span class="label label-danger margin-left-5">{{ $expiredCount }}</span></a>
+                                <li class="active">
+                                    <a href="#expiring" data-toggle="tab">@lang('dashboard.member-expiring')
+                                        <span class="label label-warning margin-left-5">{{ $expiringCount }}</span>
+                                    </a>
                                 </li>
-                                <li><a href="#birthdays" data-toggle="tab">Birthdays<span class="label label-success margin-left-5">{{ $birthdayCount }}</span></a>
+                                <li><a href="#expired" data-toggle="tab">@lang('dashboard.member-expired')<span class="label label-danger margin-left-5">{{ $expiredCount }}</span></a>
                                 </li>
-                                <li><a href="#recent" data-toggle="tab">Recent</a></li>
+                                <li><a href="#birthdays" data-toggle="tab">@lang('dashboard.member-birthdays')<span class="label label-success margin-left-5">{{ $birthdayCount }}</span></a>
+                                </li>
+                                <li><a href="#recent" data-toggle="tab">@lang('dashboard.member-recent')</a></li>
                             </ul>
 
                             <!-- Tab Content -->
@@ -92,16 +94,18 @@
                 <div class="col-lg-6">
                     <div class="panel">
                         <div class="panel-title">
-                            <div class="panel-head"><i class="fa fa-phone"></i><a href="{{ action('EnquiriesController@index') }}">Enquiries</a></div>
-                            <div class="pull-right"><a href="{{ action('EnquiriesController@create') }}" class="btn-sm btn-primary active" role="button"><i
-                                            class="fa fa-phone"></i> Add</a></div>
+                            <div class="panel-head"><i class="fa fa-phone"></i><a href="{{ action('EnquiriesController@index') }}">@lang('dashboard.enquiries-title')</a></div>
+                            <div class="pull-right"><a href="{{ action('EnquiriesController@create') }}" class="btn-sm btn-primary active" role="button"><i class="fa fa-phone"></i> @lang('dashboard.enquiries-add')</a></div>
                         </div>
 
                         <div class="panel-body with-nav-tabs">
                             <!-- Tabs Heads -->
                             <ul class="nav nav-tabs">
-                                <li class="active"><a href="#enquiries" data-toggle="tab">Enquiries</a></li>
-                                <li><a href="#reminders" data-toggle="tab">Reminders<span class="label label-warning margin-left-5">{{ $reminderCount }}</span></a>
+                                <li class="active"><a href="#enquiries" data-toggle="tab">@lang('dashboard.enquiries-tab')</a></li>
+                                <li>
+                                    <a href="#reminders" data-toggle="tab">@lang('dashboard.enquiries-reminders')
+                                        <span class="label label-warning margin-left-5">{{ $reminderCount }}</span>
+                                    </a>
                                 </li>
                             </ul>
 
